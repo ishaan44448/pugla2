@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quiz</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body class="quiz-body">
+
+    <nav>
+        <h1 class="logo">Maths Academy</h1>
+        <ul>
+            <li><a href="index.html" class="nav-link  home-btn">Home</a></li>
+        </ul>
+    </nav>
+
+    <section class="quiz-container fade-in">
+
+        <h2>📅 Daily Question</h2>
+
+        <p id="question" class="question">
+            What is the value of 5 × 6?
+        </p>
+
+        <div class="options">
+            <button onclick="checkAnswer(1)">25</button>
+            <button onclick="checkAnswer(2)">30</button>
+            <button onclick="checkAnswer(3)">35</button>
+            <button onclick="checkAnswer(4)">40</button>
+        </div>
+
+        <p id="result" class="result"></p>
+
+    </section>
+
+<script>
+let answered = false;
+
+function checkAnswer(option) {
+    let result = document.getElementById("result");
+
+    // If already answered
+    if (answered) {
+        result.innerHTML = "⚠️ You already attempted this question!";
+        result.style.color = "orange";
+        return;
+    }
+
+    answered = true;
+
+    let correct = 2;
+
+    // Disable all buttons
+    let buttons = document.querySelectorAll(".options button");
+    buttons.forEach(btn => btn.disabled = true);
+
+    if(option === correct) {
+        result.innerHTML = "✅ Correct!";
+        result.style.color = "lime";
+    } else {
+        result.innerHTML = "❌ Wrong!";
+        result.style.color = "red";
+    }
+}
+</script>
+</body>
+</html>
