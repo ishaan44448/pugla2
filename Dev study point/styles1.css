@@ -1,0 +1,106 @@
+
+.quiz-body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Quiz Container */
+.quiz-container {
+    color: white;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Question */
+.question {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.options button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: cyan;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.options button:hover {
+    transform: scale(1.05);
+    background: white;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Fade animation */
+.fade-in {
+    opacity: 1;
+} 
+/* Navbar Animation */
+.nav-link {
+    position: relative;
+    transition: 0.3s;
+    color: white;
+}
+
+/* Underline animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background: cyan;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hover glow effect */
+.nav-link:hover {
+    color: cyan;
+}
+/* Bigger Home Button */
+.home-btn {
+    font-size: 18px;
+    padding: 8px 15px;
+    background: rgb(185, 185, 185);
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.home-btn:hover {
+    background: rgb(185, 185, 185);
+    transform: scale(1.1);
+}
+.result {
+    transition: 0.3s;
+}
